@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  mongo:
+    image: bitnami/mongodb:4.2.5
+    volumes:
+      - ./dockers/mongo:/bitnami
+    environment:
+      - MONGODB_USERNAME=mongo
+      - MONGODB_PASSWORD=mongo
+      - MONGODB_DATABASE=project_name
+    ports:
+      - '27017:27017'
